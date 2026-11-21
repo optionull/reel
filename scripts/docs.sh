@@ -3,15 +3,15 @@
 # scripts/docs-finish.sh (the theme, the header mark, the landing page over the generated index.html).
 # `docs-builder serve` renders on demand and never applies those, so it would preview the wrong site.
 #
-#   mise run docs              build and serve on http://localhost:4000/reel/
+#   mise run docs              build and serve on http://localhost:4000/
 #   mise run docs -- --noserve build only
 set -euo pipefail
 root="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$root"
 
-# The sub-path GitHub Pages serves from: mpdreamz.github.io/reel. The landing page's <base href> and the workflow's
-# prefix: input must agree with it, and nothing but this check would notice if they drifted.
-path_prefix="reel"
+# The sub-path the site is served from: none, it is the root of reel.optionull.app. The landing page's <base href> and
+# the workflows' prefix: input must agree with it, and nothing but this check would notice if they drifted.
+path_prefix=""
 landing="docs/reel-landing.html"
 workflow=".github/workflows/docs.yml"
 expected_base="/"
@@ -21,7 +21,12 @@ if [[ "$actual_base" != "$expected_base" ]]; then
   echo "docs: $landing has <base href=\"$actual_base\"> but the site builds for \"$expected_base\"" >&2
   exit 1
 fi
-if ! grep -q "prefix: $path_prefix\$" "$workflow"; then
+if [[ -z "$path_prefix" ]]; then
+  if grep -q 'prefix:' "$workflow" .github/workflows/ci.yml; then
+    echo "docs: a workflow has a prefix: input but path_prefix is empty" >&2
+    exit 1
+  fi
+elif ! grep -q "prefix: $path_prefix\$" "$workflow"; then
   echo "docs: $workflow does not build with prefix: $path_prefix" >&2
   exit 1
 fi
@@ -51,12 +56,20 @@ if [[ ! -x "$tool" ]]; then
 fi
 
 # The design-system layout the theme (docs/reel-docs.css) is written for; the workflows set it too.
-FEATURE_NAVIGATION_PREVIEW=true "$tool" build --path docs --path-prefix "$path_prefix"
+if [[ -n "$path_prefix" ]]; then
+  FEATURE_NAVIGATION_PREVIEW=true "$tool" build --path docs --path-prefix "$path_prefix"
+else
+  FEATURE_NAVIGATION_PREVIEW=true "$tool" build --path docs
+fi
 out=".artifacts/docs/html"
 scripts/docs-finish.sh "$out" "$path_prefix"
 
 [[ "${1:-}" == "--noserve" ]] && exit 0
-# Served from a folder named for the prefix, so /reel/ resolves as it does on GitHub Pages.
+# Served from the root, as on reel.optionull.app (a prefix, if one is ever set, is a folder named for it).
+if [[ -z "$path_prefix" ]]; then
+  echo "docs: serving http://localhost:4000/"
+  cd "$out" && exec python3 -m http.server 4000
+fi
 serve="$(mktemp -d)"
 ln -s "$root/$out" "$serve/$path_prefix"
 echo "docs: serving http://localhost:4000/$path_prefix/"

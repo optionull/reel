@@ -32,8 +32,8 @@ or both. Read `PLAN.md` first.
   ignores until the videos have a home. It plays music and takes the mouse and keyboard; CI only checks the reels parse.
 - `mise run docs` builds the website as CI does (docs-builder over `docs/` with `FEATURE_NAVIGATION_PREVIEW=true`,
   then `scripts/docs-finish.sh`: the theme `docs/reel-docs.css` appended to the design system's stylesheet, the header
-  mark and root links patched by `scripts/docs-pages.py`, and `docs/reel-landing.html` over its home page) and serves it on http://localhost:4000/reel/. The `docs` workflow publishes
-  it to GitHub Pages, mpdreamz.github.io/reel, on every push to main. A change to the reel language or the command line
+  mark and root links patched by `scripts/docs-pages.py`, and `docs/reel-landing.html` over its home page) and serves it on http://localhost:4000/. The `docs` workflow publishes
+  it to GitHub Pages, reel.optionull.app, on every push to main. A change to the reel language or the command line
   updates `docs/` in the same pull request, as it does PLAN.md. The landing page's video, `docs/landing/reel-demo.mp4`,
   and `reel-demo.gif` are the showcase's `web` cut (`demos/showcase.reel`, three tracks: a terminal recording
   `demos/musicbox.reel`, a code screen following it, Musicbox attached): copy `docs/media/showcase-web.mp4` and

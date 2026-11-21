@@ -7,8 +7,8 @@ Demo videos from a script: Mac apps and web pages with their own sound, code wal
 command line, alone or recorded side by side. Like [VHS](https://github.com/charmbracelet/vhs), but not only for
 terminals.
 
-**[Documentation](https://mpdreamz.github.io/reel/getting-started/)** ·
-[Website](https://mpdreamz.github.io/reel/) ·
+**[Documentation](https://reel.optionull.app/getting-started/)** ·
+[Website](https://reel.optionull.app/) ·
 [Releases](https://github.com/Mpdreamz/reel/releases)
 
 ```sh
@@ -121,7 +121,7 @@ Spotlight term
   LinkedIn and Instagram, each in its shape and under its size and length; presets to share it all between reels;
   conditions for what differs.
 
-The [documentation](https://mpdreamz.github.io/reel/getting-started/) has the rest: a first reel, every command and
+The [documentation](https://reel.optionull.app/getting-started/) has the rest: a first reel, every command and
 setting, and troubleshooting.
 
 ## From source
@@ -131,7 +131,7 @@ With [mise](https://mise.jdx.dev) and Xcode or the Command Line Tools (for the m
 ```sh
 mise run install   # a release build into ~/.local/bin/reel
 mise run test      # the tests
-mise run docs      # the website and docs, on http://localhost:4000/reel/
+mise run docs      # the website and docs, on http://localhost:4000/
 ```
 
 [AGENTS.md](AGENTS.md) has the conventions; [PLAN.md](PLAN.md) the design and the reel language in full.

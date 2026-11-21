@@ -7,14 +7,14 @@
  * pair is `var(--ds-l, light) var(--ds-d, dark)`.
  */
 
-/* Self-hosted (docs/fonts, OFL), the landing page's six files. The site lives under /reel: scripts/docs-finish.sh
-   checks these URLs carry the prefix it builds for. */
+/* Self-hosted (docs/fonts, OFL), the landing page's six files. The site is served from the root: scripts/docs-finish.sh
+   checks these URLs carry the path prefix it builds for (none). */
 @font-face {
 	font-family: 'Jost';
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/reel/fonts/jost-latin-400-normal.woff2') format('woff2');
+	src: url('/fonts/jost-latin-400-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -22,7 +22,7 @@
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url('/reel/fonts/jost-latin-500-normal.woff2') format('woff2');
+	src: url('/fonts/jost-latin-500-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -30,7 +30,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/reel/fonts/instrument-sans-latin-400-normal.woff2') format('woff2');
+	src: url('/fonts/instrument-sans-latin-400-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -38,7 +38,7 @@
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url('/reel/fonts/instrument-sans-latin-500-normal.woff2') format('woff2');
+	src: url('/fonts/instrument-sans-latin-500-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -46,7 +46,7 @@
 	font-style: normal;
 	font-weight: 400;
 	font-display: swap;
-	src: url('/reel/fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');
+	src: url('/fonts/jetbrains-mono-latin-400-normal.woff2') format('woff2');
 }
 
 @font-face {
@@ -54,7 +54,7 @@
 	font-style: normal;
 	font-weight: 500;
 	font-display: swap;
-	src: url('/reel/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');
+	src: url('/fonts/jetbrains-mono-latin-500-normal.woff2') format('woff2');
 }
 
 @layer ds.tokens {

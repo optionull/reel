@@ -5,16 +5,17 @@
 # videos and their posters). Needs a build with FEATURE_NAVIGATION_PREVIEW=true: without it the pages load no ds.css
 # and this fails.
 #
-#   scripts/docs-finish.sh .artifacts/docs/html reel
+#   scripts/docs-finish.sh .artifacts/docs/html ""
 set -euo pipefail
 root="$(cd "$(dirname "$0")/.." && pwd)"
-out="${1:?usage: docs-finish.sh <docs-builder output dir> <path prefix>}"
-prefix="${2:?usage: docs-finish.sh <docs-builder output dir> <path prefix>}"
+out="${1:?usage: docs-finish.sh <docs-builder output dir> <path prefix, may be empty>}"
+prefix="${2-}"
+prefix="${prefix#/}"; prefix="${prefix%/}"
 theme="$root/docs/reel-docs.css"
 
 # The theme's @font-face URLs carry the prefix; a build for another prefix would load no fonts.
-if ! grep -q "url('/$prefix/fonts/" "$theme"; then
-  echo "docs: $theme does not load its fonts from /$prefix/fonts/" >&2
+if ! grep -q "url('${prefix:+/$prefix}/fonts/" "$theme"; then
+  echo "docs: $theme does not load its fonts from ${prefix:+/$prefix}/fonts/" >&2
   exit 1
 fi
 
