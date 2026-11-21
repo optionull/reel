@@ -26,17 +26,16 @@ jobs:
     steps:
       - uses: actions/checkout@v5
 
-      # Served at mpdreamz.github.io/reel: scripts/docs.sh checks this prefix against the landing page's <base href>.
+      # Served from the root of reel.optionull.app, so no path prefix input (scripts/docs.sh rejects one, and checks the landing
+      # page's <base href> is "/").
       # The design-system layout is what docs/reel-docs.css themes.
       - name: Build documentation
         uses: elastic/docs-builder@main
         env:
           FEATURE_NAVIGATION_PREVIEW: true
-        with:
-          prefix: reel
 
       - name: Theme and landing page
-        run: scripts/docs-finish.sh .artifacts/docs/html reel
+        run: scripts/docs-finish.sh .artifacts/docs/html ""
 
       - name: Setup Pages
         uses: actions/configure-pages@v6.0.0
