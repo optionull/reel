@@ -5,7 +5,7 @@
 #   scripts/release-secrets.sh                     the Developer ID certificate (and its password)
 #   scripts/release-secrets.sh --p8 ~/Downloads/AuthKey_ABC123.p8 --key-id ABC123 --issuer-id <uuid>
 #                                                  the notarization API key too
-#   scripts/release-secrets.sh --tap               only the token that lets releases update mpdreamz/homebrew-tap
+#   scripts/release-secrets.sh --tap               only the token that lets releases update optionull/homebrew-tap
 #                                                  (asked for, not shown: a fine-grained token with contents:write there)
 #
 # The certificate: macOS asks to allow exporting your keychain's signing identities. Only the "Developer ID
@@ -13,7 +13,7 @@
 # keychain imports, and checked by signing a file with it in a throwaway keychain before anything is uploaded.
 set -euo pipefail
 
-repo="mpdreamz/reel"
+repo="optionull/reel"
 openssl=/usr/bin/openssl # LibreSSL: reads what `security export` writes without -legacy, writes what `security import` reads
 p8="" key_id="" issuer_id="" tap=false
 
@@ -36,7 +36,7 @@ gh auth status >/dev/null 2>&1 || { echo "release-secrets: sign in to gh first (
 
 # The tap token: asked for by gh, which reads it without echoing it.
 if $tap; then
-  echo "release-secrets: paste a token that can push to mpdreamz/homebrew-tap (contents: write), then return"
+  echo "release-secrets: paste a token that can push to optionull/homebrew-tap (contents: write), then return"
   gh secret set HOMEBREW_TAP_TOKEN --repo "$repo"
   echo "release-secrets: HOMEBREW_TAP_TOKEN stored on $repo"
   exit 0

@@ -12,7 +12,7 @@ Set Voice guest voicebox:Michael
 # reel's own stings open and close it (design/motion, set in the preset): the background alone, 2 s. The square cut
 # has no sting in its shape, so it gets title cards on the designed backgrounds instead.
 Intro@crossfade,ease-out,600ms square ? "reel" "Demo videos from a script" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Hide
 Wait #lanes

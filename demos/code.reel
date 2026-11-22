@@ -10,7 +10,7 @@ Set Viewport 1100x620
 Set FontSize 20
 # reel's own stings open and close it, as they do the other demos; the square cut gets title cards.
 Intro@crossfade,ease-out,600ms square ? "reel" "Code too" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Code code/SpeechClock.swift
 Say "Reel walks through code too, in an editor of its own. Nothing to install, and no permissions."

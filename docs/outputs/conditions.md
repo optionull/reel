@@ -16,7 +16,7 @@ when no profile is rendering. A condition is a profile's name, or names joined b
 A line that starts with `:` continues the line before it, so a long chain lines up:
 
 ```
-Caption github ? "brew install --cask mpdreamz/tap/reel"
+Caption github ? "brew install --cask optionull/tap/reel"
         : social|feed ? "Follow for more"
         : "Recorded with reel"
 ```
@@ -39,8 +39,8 @@ Conditions work where rendering decides: `Set`, `Caption`, `Intro`, `Outro` and 
 condition covers all of a command's values:
 
 ```
-Outro social ? "Recorded with reel" "github.com/Mpdreamz/reel"
-    : "Recorded with reel" "brew install --cask mpdreamz/tap/reel"
+Outro social ? "Recorded with reel" "github.com/optionull/reel"
+    : "Recorded with reel" "brew install --cask optionull/tap/reel"
 ```
 
 Anything that happens while recording (`Say`, `Type`, `Click`, the window's size, the voice) is the same for every

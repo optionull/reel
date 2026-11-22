@@ -44,7 +44,7 @@ struct ConditionTests {
         Launch x
         Output a.mp4
         Click "Play"
-        Caption github ? "brew install --cask mpdreamz/tap/reel"
+        Caption github ? "brew install --cask optionull/tap/reel"
                 : social|feed ? "Follow for more"
                 : "Recorded with reel"
         Sleep 1s
@@ -54,7 +54,7 @@ struct ConditionTests {
         let social = try tape.with(profile: tape.profile(named: "social"))
         #expect(captions(social) == ["Follow for more"])
         #expect(try captions(tape.with(profile: tape.profile(named: "github"))) ==
-            ["brew install --cask mpdreamz/tap/reel"])
+            ["brew install --cask optionull/tap/reel"])
         // What recording does is the same, so one take serves them all; lines after the chain keep their numbers.
         #expect(social.actions == tape.actions)
         #expect(tape.steps.last?.line == 8)

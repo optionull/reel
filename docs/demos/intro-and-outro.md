@@ -6,7 +6,7 @@ description: "Title cards before and after the demo, over a colour, an image or 
 
 ```
 Intro@slide-up,ease-out,700ms "Musicbox" "Chord progressions, sketched and heard"
-Outro@fade,800ms "Recorded with reel" "brew install --cask mpdreamz/tap/reel"
+Outro@fade,800ms "Recorded with reel" "brew install --cask optionull/tap/reel"
 Set IntroBackground //demos/backgrounds/intro-16x10.jpg
 Set OutroBackground //demos/backgrounds/outro-16x10.jpg
 ```

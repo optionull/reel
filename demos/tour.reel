@@ -9,4 +9,4 @@ Include@slide-left,ease-in-out,800ms cli.reel
 Output //docs/media/tour.mp4
 Output //docs/media/tour.gif
 Intro@crossfade,ease-out,600ms square ? "reel" "Code and the command line" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
