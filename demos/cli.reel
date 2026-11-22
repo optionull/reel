@@ -12,7 +12,7 @@ Set Rows 20
 Set FontSize 18
 Set Title "hello — zsh"
 Intro@crossfade,ease-out,600ms square ? "reel" "The command line too" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Hide
 Type@0ms "export PATH=$PWD/.build/debug:$PATH; rm -rf /tmp/hello; mkdir /tmp/hello; cp demos/cli/hello.reel demos/code/SpeechClock.swift /tmp/hello; cd /tmp/hello; clear"

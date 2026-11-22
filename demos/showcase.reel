@@ -46,7 +46,7 @@ Set Voice guest voicebox:Michael
 # The take in the terminal runs for minutes: every wait for it waits as long.
 Set WaitTimeout 3m
 Intro@crossfade,ease-out,600ms square ? "reel" "Demo videos from a script" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Hide
 Wait for ready

@@ -9,10 +9,10 @@ terminals.
 
 **[Documentation](https://reel.optionull.app/getting-started/)** ·
 [Website](https://reel.optionull.app/) ·
-[Releases](https://github.com/Mpdreamz/reel/releases)
+[Releases](https://github.com/optionull/reel/releases)
 
 ```sh
-brew install --cask mpdreamz/tap/reel
+brew install --cask optionull/tap/reel
 reel doctor
 ```
 

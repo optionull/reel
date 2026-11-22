@@ -11,7 +11,7 @@ Set FontSize 18
 # The whole diff fills the screen, and the last hunk sits where subtitles go: they are for the muted feeds only.
 Set Subtitles social|feed|square ? on : off
 Intro@crossfade,ease-out,600ms square ? "reel" "What changed" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Code code/SpeechClock-before.swift
 Say "Here's the clock before this change."

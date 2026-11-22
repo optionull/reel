@@ -7,13 +7,13 @@ description: "Install reel with Homebrew, or build it from source."
 reel is a command-line tool for macOS 15 or later on Apple silicon.
 
 ```sh
-brew install --cask mpdreamz/tap/reel
+brew install --cask optionull/tap/reel
 reel doctor
 ```
 
 The cask installs `Reel Companion.app` beside it, a menu bar app that shows what a run is doing (see
 [the companion app](companion.md)). `brew upgrade` updates both. Releases are signed with a Developer ID and notarized by Apple, so the binary runs without
-a warning. The [releases](https://github.com/Mpdreamz/reel/releases) page has `reel-arm64.zip` and its checksum for
+a warning. The [releases](https://github.com/optionull/reel/releases) page has `reel-arm64.zip` and its checksum for
 scripts.
 
 Nothing else is needed: reel records with ScreenCaptureKit, encodes with AVFoundation and narrates with macOS's own
@@ -30,7 +30,7 @@ You need [mise](https://mise.jdx.dev) and the macOS SDK, from Xcode or the Comma
 Line Tools cannot build the tests.
 
 ```sh
-git clone https://github.com/Mpdreamz/reel.git
+git clone https://github.com/optionull/reel.git
 cd reel
 mise run install    # builds a release binary into ~/.local/bin/reel
 ```

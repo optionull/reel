@@ -1,13 +1,13 @@
 # TEMPLATE: scripts/bump-tap.sh fills in __VERSION__ and __SHA256__ from a published release and writes the result to
-# mpdreamz/homebrew-tap as Casks/reel.rb.
+# optionull/homebrew-tap as Casks/reel.rb.
 cask "reel" do
   version "__VERSION__"
   sha256 "__SHA256__"
 
-  url "https://github.com/mpdreamz/reel/releases/download/v#{version}/reel-arm64.zip"
+  url "https://github.com/optionull/reel/releases/download/v#{version}/reel-arm64.zip"
   name "reel"
   desc "Record app and web page demos from a script, with sound"
-  homepage "https://github.com/mpdreamz/reel"
+  homepage "https://reel.optionull.app/"
 
   livecheck do
     url :url

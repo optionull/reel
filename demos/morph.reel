@@ -9,7 +9,7 @@ Set Viewport 1100x620
 Set FontSize 18
 Set Subtitles social|feed|square ? on : off
 Intro@crossfade,ease-out,600ms square ? "reel" "Before and after" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Code code/SpeechClock-before.swift
 Say "Here's the clock before the change."

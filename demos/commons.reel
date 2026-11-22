@@ -16,7 +16,7 @@ Set Voice guest voicebox:Michael
 Set Ducking 60%
 # reel's own stings open and close it, as they do the Musicbox demo; the square cut gets title cards.
 Intro@crossfade,ease-out,600ms square ? "reel" "Web pages too" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Wait css:".mw-tmh-play"
 Say "Reel records web pages too, sound and all."

@@ -478,7 +478,7 @@ at a time, so a condition inside a chosen value could never matter: it is refuse
 line that starts with `:` continues the one before it, so a long chain lines up:
 
 ```
-Caption github ? "brew install --cask mpdreamz/tap/reel"
+Caption github ? "brew install --cask optionull/tap/reel"
         : social|feed ? "Follow for more"
         : "Recorded with reel"
 ```

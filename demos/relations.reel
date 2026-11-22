@@ -8,7 +8,7 @@ Output //docs/media/relations.gif
 Set Viewport 1100x620
 Set FontSize 18
 Intro@crossfade,ease-out,600ms square ? "reel" "Between files" : 2s
-Outro@fade,800ms square ? "Recorded with reel" "brew install --cask mpdreamz/tap/reel" : 2s
+Outro@fade,800ms square ? "Recorded with reel" "brew install --cask optionull/tap/reel" : 2s
 
 Code code/Synthesizer.swift
 Say "A code walkthrough moves between files. Here's a protocol,"

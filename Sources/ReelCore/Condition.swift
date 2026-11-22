@@ -55,7 +55,7 @@ enum Condition {
 
     /// A line of `:` and what follows continues the one before it, so a long chain can line up:
     ///
-    ///     Caption github ? "brew install --cask mpdreamz/tap/reel"
+    ///     Caption github ? "brew install --cask optionull/tap/reel"
     ///             : social ? "Follow for more"
     ///             : "Recorded with reel"
     ///
